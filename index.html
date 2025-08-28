@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>Yup! I’m Bhuvii</title>
+
+    <!-- Font: Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      html,
+      body {
+        height: 100%;
+        background-color: #0d0d0d;
+        color: #fff;
+        overflow: hidden;
+        cursor: none;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container {
+        max-width: 800px;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 800;
+      }
+
+      .subtitle {
+        color: #888;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+
+      .content {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+        justify-content: center;
+        margin-top: 20px;
+      }
+
+      .timeline {
+        width: 10px;
+        height: 10px;
+        background: white;
+        border-radius: 50%;
+        margin-top: 10px;
+      }
+
+      .bio {
+        font-size: 1rem;
+        line-height: 1.8;
+        text-align: left;
+        color: #ccc;
+        max-width: 600px;
+      }
+
+      .bio .highlight {
+        color: #1d9bf0;
+      }
+
+      .bio .expo {
+        color: #f97316;
+      }
+
+      button {
+        margin-top: 30px;
+        background: transparent;
+        border: 1px solid #ccc;
+        padding: 12px 24px;
+        color: #fff;
+        font-size: 1rem;
+        cursor: none;
+        transition: 0.3s ease;
+      }
+
+      button:hover {
+        background: #fff;
+        color: #000;
+        cursor: none;
+        box-shadow: 0 0 40px rgba(255, 255, 255, 0.3),
+          inset 0 0 10px rgba(255, 255, 255, 0.1);
+      }
+
+      .icons {
+        margin-top: 30px;
+        font-size: 1.5rem;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .icons a {
+        color: #999;
+        transition: 0.3s ease;
+        cursor: none;
+      }
+
+      .icons a:hover {
+        color: #fff;
+        cursor: none;
+      }
+
+      /* Glassmorphism Cursor */
+      .cursor {
+        width: 24px;
+        height: 24px;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border-radius: 50%;
+        position: fixed;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: all 0.15s ease;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.3),
+          inset 0 0 10px rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="cursor"
+      id="cursor"
+    ></div>
+
+    <div class="container">
+      <h1>YUP! I'M BHUVNESH VERMA</h1>
+      <div class="subtitle">
+        but you can call me <span class="highlight">bhuvii</span>
+      </div>
+
+      <div class="content">
+        <div class="timeline"></div>
+        <div class="bio">
+          I’m a 20-year-old dev from India who loves building quirky, purposeful
+          apps with <span class="highlight">TypeScript</span> and
+          <span class="expo">Expo</span>. Whether it’s sending you daily quotes
+          or managing events with style, I’m all about clean UIs, real-time
+          magic, and fun side-projects. When I’m not writing code or battling
+          bugs, you’ll catch me vibing to music. Got a crazy idea ? Let’s build
+          something that breaks the rules — and maybe a few rate limits.
+        </div>
+      </div>
+
+      <button>LET'S CONNECT</button>
+
+      <div class="icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-spotify"></i></a>
+        <a href="#"><i class="fab fa-discord"></i></a>
+        <a href="mailto:someone@example.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+
+    <script>
+      const cursor = document.getElementById("cursor");
+
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.clientX + "px";
+        cursor.style.top = e.clientY + "px";
+      });
+
+      document.addEventListener("mouseleave", () => {
+        cursor.style.opacity = "0";
+      });
+
+      document.addEventListener("mouseenter", () => {
+        cursor.style.opacity = "1";
+      });
+    </script>
+  </body>
+</html>
